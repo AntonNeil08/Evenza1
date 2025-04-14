@@ -1,0 +1,121 @@
+ERROR - 2025-03-16 04:05:01 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-03-16 04:05:01 --> 220 smtp.gmail.com ESMTP d9443c01a7336-225c68a406fsm51655075ad.64 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2001:4454:356:2200:d55b:3a01:568e:a23c]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to send AUTH LOGIN command. Error: 530-5.7.0 Must issue a STARTTLS command first. For more information, go to
+530-5.7.0  https://support.google.com/a/answer/3221692 and review RFC 3207
+530 5.7.0 specifications. d9443c01a7336-225c68a406fsm51655075ad.64 - gsmtp
+
+ERROR - 2025-03-16 04:06:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-03-16 04:06:16 --> 220 smtp.gmail.com ESMTP d9443c01a7336-225c6bbfb44sm51336985ad.207 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2001:4454:356:2200:d55b:3a01:568e:a23c]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 
+The following SMTP error was encountered: 
+quit: 250 2.1.0 OK d9443c01a7336-225c6bbfb44sm51336985ad.207 - gsmtp
+
+The following SMTP error was encountered: 250 2.1.0 OK d9443c01a7336-225c6bbfb44sm51336985ad.207 - gsmtp
+
+ERROR - 2025-03-16 04:09:46 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL: An existing connection was forcibly closed by the remote host in C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php:1898
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1898): fsockopen()
+#2 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1811): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1696): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1591): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\app\Helpers\email_helper.php(33): CodeIgniter\Email\Email->send()
+#6 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\app\Controllers\AuthController.php(124): sendOTPEmail()
+#7 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(933): App\Controllers\AuthController->resendOTP()
+#8 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\rewrite.php(44): require_once('...')
+#14 {main}
+ERROR - 2025-03-16 04:09:46 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-03-16 04:09:46 --> 
+CRITICAL - 2025-03-16 05:28:01 --> Error: Call to undefined function App\Controllers\sendPasswordResetEmail()
+[Method: POST, Route: user/reset-password]
+in APPPATH\Controllers\UserController.php on line 91.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->resetPassword()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\neilg\\OneDrive\\Desktop\\codeigniter4-framework-96a1e60\\public\\index.php')
+ERROR - 2025-03-16 05:31:03 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): Unable to connect to tls://smtp.gmail.com:465 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php:1898
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1898): fsockopen()
+#2 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1811): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1696): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1591): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\app\Helpers\email_helper.php(60): CodeIgniter\Email\Email->send()
+#6 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\app\Controllers\UserController.php(93): sendPasswordResetEmail()
+#7 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(933): App\Controllers\UserController->resetPassword()
+#8 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\rewrite.php(44): require_once('...')
+#14 {main}
+ERROR - 2025-03-16 05:31:03 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-03-16 05:31:03 --> 
+CRITICAL - 2025-03-16 06:28:17 --> Error: Class "App\Models\DepartmentModel" not found
+[Method: GET, Route: student/list]
+in APPPATH\Controllers\StudentController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\StudentController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\neilg\\OneDrive\\Desktop\\codeigniter4-framework-96a1e60\\public\\index.php')
+CRITICAL - 2025-03-16 06:32:30 --> Error: Class "App\Models\DepartmentModel" not found
+[Method: GET, Route: student/list]
+in APPPATH\Controllers\StudentController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\StudentController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\neilg\\OneDrive\\Desktop\\codeigniter4-framework-96a1e60\\public\\index.php')
+ERROR - 2025-03-16 06:42:24 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): Unable to connect to tls://smtp.gmail.com:465 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php:1898
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1898): fsockopen()
+#2 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1811): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1696): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Email\Email.php(1591): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\app\Helpers\email_helper.php(33): CodeIgniter\Email\Email->send()
+#6 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\app\Controllers\AuthController.php(103): sendOTPEmail()
+#7 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(933): App\Controllers\AuthController->generateOTP()
+#8 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\neilg\OneDrive\Desktop\codeigniter4-framework-96a1e60\system\rewrite.php(44): require_once('...')
+#14 {main}
+ERROR - 2025-03-16 06:42:24 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-03-16 06:42:24 --> 
