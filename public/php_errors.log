@@ -1,0 +1,79 @@
+[19-Mar-2025 11:43:52 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:43:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:43:53 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:43:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:45:55 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:45:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:45:59 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:45:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:48:11 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:48:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:50:34 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:50:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:52:27 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 11:52:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 13:01:23 UTC] PHP Warning:  require_once(C:\xampp\htdocs\uvluate-api\public\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[19-Mar-2025 13:01:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\uvluate-api\public\index.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\uvluate-api\system\rewrite.php:44
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\system\rewrite.php on line 44
+[23-Mar-2025 03:30:59 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined array key "HTTP_HOST" in C:\xampp\htdocs\uvluate-api\app\Config\Cookie.php:59
+Stack trace:
+#0 C:\xampp\htdocs\uvluate-api\app\Config\Cookie.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\xampp\htdocs\uvluate-api\system\Config\Factories.php(235): Config\Cookie->__construct()
+#2 C:\xampp\htdocs\uvluate-api\system\Config\Factories.php(169): CodeIgniter\Config\Factories::createInstance()
+#3 C:\xampp\htdocs\uvluate-api\system\Config\Factories.php(188): CodeIgniter\Config\Factories::__callStatic()
+#4 C:\xampp\htdocs\uvluate-api\system\Common.php(210): CodeIgniter\Config\Factories::get()
+#5 C:\xampp\htdocs\uvluate-api\system\HTTP\Response.php(164): config()
+#6 C:\xampp\htdocs\uvluate-api\system\Config\Services.php(589): CodeIgniter\HTTP\Response->__construct()
+#7 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(312): CodeIgniter\Config\Services::response()
+#8 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+#9 C:\xampp\htdocs\uvluate-api\system\Config\Services.php(584): CodeIgniter\Config\BaseService::getSharedInstance()
+#10 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(312): CodeIgniter\Config\Services::response()
+#11 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+#12 C:\xampp\htdocs\uvluate-api\system\Common.php(1000): CodeIgniter\Config\BaseService::get()
+#13 C:\xampp\htdocs\uvluate-api\system\Debug\Exceptions.php(157): service()
+#14 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#15 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\app\Config\Cookie.php on line 59
+[23-Mar-2025 03:30:59 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined array key "HTTP_HOST" in C:\xampp\htdocs\uvluate-api\app\Config\Cookie.php:59
+Stack trace:
+#0 C:\xampp\htdocs\uvluate-api\app\Config\Cookie.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\xampp\htdocs\uvluate-api\system\Config\Factories.php(235): Config\Cookie->__construct()
+#2 C:\xampp\htdocs\uvluate-api\system\Config\Factories.php(169): CodeIgniter\Config\Factories::createInstance()
+#3 C:\xampp\htdocs\uvluate-api\system\Config\Factories.php(188): CodeIgniter\Config\Factories::__callStatic()
+#4 C:\xampp\htdocs\uvluate-api\system\Common.php(210): CodeIgniter\Config\Factories::get()
+#5 C:\xampp\htdocs\uvluate-api\system\HTTP\Response.php(164): config()
+#6 C:\xampp\htdocs\uvluate-api\system\Config\Services.php(589): CodeIgniter\HTTP\Response->__construct()
+#7 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(312): CodeIgniter\Config\Services::response()
+#8 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+#9 C:\xampp\htdocs\uvluate-api\system\Config\Services.php(584): CodeIgniter\Config\BaseService::getSharedInstance()
+#10 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(312): CodeIgniter\Config\Services::response()
+#11 C:\xampp\htdocs\uvluate-api\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+#12 C:\xampp\htdocs\uvluate-api\system\Common.php(1000): CodeIgniter\Config\BaseService::get()
+#13 C:\xampp\htdocs\uvluate-api\system\Debug\Exceptions.php(157): service()
+#14 C:\xampp\htdocs\uvluate-api\system\Debug\Exceptions.php(317): CodeIgniter\Debug\Exceptions->exceptionHandler()
+#15 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#16 {main}
+  thrown in C:\xampp\htdocs\uvluate-api\app\Config\Cookie.php on line 59

@@ -1,0 +1,56 @@
+# Disable directory browsing
+#root
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+
+    # Block direct access to .htaccess
+    <Files ".htaccess">
+        Order Allow,Deny
+        Deny from all
+    </Files>
+
+    # Ensure all requests go through index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+    # Handle OPTIONS requests before routing to CodeIgniter
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ - [R=204,L]
+
+    # Redirect Trailing Slashes (remove trailing slash)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Redirect "www.example.com" to "example.com"
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Ensure Authorization header is passed (for JWT and authentication)
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_headers.c>
+    SetEnvIf Origin "http(s)?://(localhost:5173|uvluate\.space)$" AccessControlAllowOrigin=$0
+    Header always set Access-Control-Allow-Origin "%{AccessControlAllowOrigin}e" env=AccessControlAllowOrigin
+    Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With, api-key, latitude, longitude"
+    Header always set Access-Control-Allow-Credentials "true"
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # If mod_rewrite is not available, handle 404 errors with index.php
+    ErrorDocument 404 index.php
+</IfModule>
+
+# Disable Server Signature for security
+ServerSignature Off

@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'uvluate',
+        'username'     => 'u318496708_uvluate_root',
+        'password'     => 'AntonNeil112719',
+        'database'     => 'u318496708_uvluate',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
