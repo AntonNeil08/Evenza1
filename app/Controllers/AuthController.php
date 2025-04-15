@@ -16,29 +16,32 @@ class AuthController extends ResourceController
     public function sign_up()
     {
         $data = [
-            'user_name'  => $this->request->getPost('user_name'),
-            'full_name'  => $this->request->getPost('full_name'),
-            'password'   => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
-            'email'      => $this->request->getPost('email'),
-            'country'    => $this->request->getPost('country'),
-            'city'       => $this->request->getPost('city')
+            'user_name' => $this->request->getPost('user_name'),
+            'password'  => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
+            'full_name' => $this->request->getPost('full_name'),
+            'email'     => $this->request->getPost('email'),
+            'country'   => $this->request->getPost('country'),
+            'state'     => $this->request->getPost('state'),
+            'city'      => $this->request->getPost('city')
         ];
     
-        $this->userModel->errors = []; 
+        $result = $this->userModel->createUser($data);
     
-        $success = $this->userModel->createUser($data);
-    
-        if ($success) {
-            return $this->respondCreated([
-                'status'    => 'success',
-                'message'   => 'User created successfully',
-                'user_name' => $data['user_name']
-            ]);
+        if (!$result['success']) {
+            return $this->respond([
+                'success' => false,
+                'message' => 'Validation failed.',
+                'data'    => $result['errors']
+            ], 400);
         }
     
-        log_message('error', 'Validation failed: ' . json_encode($this->userModel->errors()));
-        return $this->failValidationErrors($this->userModel->errors());
+        return $this->respond([
+            'success' => true,
+            'message' => 'User created successfully.',
+            'data'    => []
+        ], 201);
     }
+
     public function sign_in()
     {
         $userName = $this->request->getPost('user_name');
@@ -47,9 +50,15 @@ class AuthController extends ResourceController
         $user = $this->userModel->getUserByUsername($userName);
     
         if ($user && password_verify($password, $user['password'])) {
-            return $this->respond(['status' => 'success', 'message' => 'Login successful']);
-        } else {
-            return $this->failNotFound('Invalid username or password');
+            return $this->respond([
+                'success' => true,
+                'message' => 'Login successful.',
+                'data' => [
+                    'email' => $user['email']
+                ]
+            ]);
         }
+    
+        return $this->failNotFound('Invalid username or password');
     }
 }

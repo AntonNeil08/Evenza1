@@ -11,7 +11,8 @@ class UserModel extends Model
         'password',
         'full_name',
         'email', 
-        'country', 
+        'country',
+        'state',
         'city'
     ];
     
@@ -21,7 +22,6 @@ class UserModel extends Model
         'password'  => 'required',
         'email'     => 'required|valid_email|is_unique[user.email]',
         'country'   => 'required',
-        'city'      => 'required'
     ];
     
     protected $validationMessages = [
@@ -40,8 +40,12 @@ class UserModel extends Model
      */
     public function createUser($data)
     {
-        $this->errors = [];
-        return $this->insert($data);
+        if (!$this->validate($data)) {
+            return ['success' => false, 'errors' => $this->errors()];
+        }
+
+        $this->insert($data);
+        return ['success' => true];
     }
     /**
      * Fetch a user by username
@@ -49,5 +53,18 @@ class UserModel extends Model
     public function getUserByUsername($userName)
     {
         return $this->where('user_name', $userName)->first();
+    }
+    /**
+    * Get all usernames that match a search term
+    */
+    public function getUsernames($search = null)
+    {
+        $builder = $this->select('user_name');
+    
+        if ($search) {
+            $builder->like('user_name', $search);
+        }
+    
+        return $builder->findAll();
     }
 }
